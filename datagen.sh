@@ -101,7 +101,8 @@ then
  awk 'IGNORECASE=1; /create table/ {{close (fn); fn=("F" ++i)}; n++} fn {print > fn;}' $file
  for j in $(ls -1 F*)
  do
- i=0
+ sed -i '2,$ s/.*/\U&/' $j
+ i=1
  while [[ $i -le $nrows ]]
  do
    ((i = i + 1))
@@ -214,6 +215,7 @@ echo -e "Your data is almost ready. Prepared your database to import."
 
  if [[ $ltype == "i" || $ltype == "insert" ]]
  then
+    echo "commit;" >> $fname.dat
     echo "Ok! You choose insert. Your output file ["$fname".dat] has $nrows insert statements"
  else
    echo "Ok! You choose copy. Your output file ["$fname".dat] has $nrows comma seperated rows. use delimiter ','"
