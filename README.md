@@ -10,31 +10,31 @@ Most importantly, by our own experiences, when you're writing queries to test a 
 
 Imagine a tool that can simplify the method for generation of test data and takes away all of these problems. There are multiple reasons why this tool will be an asset for us - 
 
-Hassel-free: No need to worry about schema and data now. Tool will generate the most powerful schema for testing.
+*Hassel-free: No need to worry about schema and data now. Tool will generate the most powerful schema for testing.
 
 No existing data set available for testing: For example array data types, no available data set was present, manually creating data will take a lot of effort. 
 
-Test unusual cases: Test unusual cases with lot of randomness in data type and data sets
+*Test unusual cases: Test unusual cases with lot of randomness in data type and data sets
 
-Turnaround Time: As data and schema is ready within a few minutes, testing time would decrease like never before. 
+*Turnaround Time: As data and schema is ready within a few minutes, testing time would decrease like never before. 
 
-Usability: Any team can use this tool irrespective of knowledge about schema and data types. 
+*Usability: Any team can use this tool irrespective of knowledge about schema and data types. 
 
-Saves Time: A delayed product delivery is not good for any business. Most of us find problems with the time required to generate unique schema and data to perform testing especially when it is regression testing. This tool will solve this problem and maximize your testing capabilities
+*Saves Time: A delayed product delivery is not good for any business. Most of us find problems with the time required to generate unique schema and data to perform testing especially when it is regression testing. This tool will solve this problem and maximize your testing capabilities
 
-Checks Quality: If setup ready, which is almost error-free then team needs to check for quality of rest of the script
+*Checks Quality: If setup ready, which is almost error-free then team needs to check for quality of rest of the script
 
-Early Bug Detection: Random schema and data is ready within a minute; everything is in your way! Log a bug!!
+*Early Bug Detection: Random schema and data is ready within a minute; everything is in your way! Log a bug!!
 
-Portable & Easy to maintain: Tool is portable in any Linux flavor and easy to maintain as compared to the rest of the tool available with limited capabilities.
+*Portable & Easy to maintain: Tool is portable in any Linux flavor and easy to maintain as compared to the rest of the tool available with limited capabilities.
 
-Improves Test Coverage: It will for sure, improve test coverage because it will do all magic for you while creating schema and generation of data.
+*Improves Test Coverage: It will for sure, improve test coverage because it will do all magic for you while creating schema and generation of data.
 
-Manpower Utilization: This is relative to the above benefits. You know it!
+*Manpower Utilization: This is relative to the above benefits. You know it!
 
-Improves Team Motivation: This is a big challenge in the testing. Distributed manpower among various features and tasks can't enable most of the folks to learn something new. Cutting down effort using this tool, improve team to focus on other interesting stuff.
+*Improves Team Motivation: This is a big challenge in the testing. Distributed manpower among various features and tasks can't enable most of the folks to learn something new. Cutting down effort using this tool, improve team to focus on other interesting stuff.
 
-Testing Flexibility: Anyone can do Sanity or full testing if you have schema and data ready. Isn't it!
+*Testing Flexibility: Anyone can do Sanity or full testing if you have schema and data ready. Isn't it!
 
 And many more...
 
@@ -45,83 +45,81 @@ Scripting Language 	     Bash Shell Scripting
 Developer	               Manvendra Panwar
 Support                  manvendra2525@gmail.com
 
-Highlight: This tool is powered with shell scripting which generate automatic schema and data. This randomgenerator module is fragmented into 2 parts, schemagen.sh and datagen.sh
+*Highlight*: This tool is powered with shell scripting which generate automatic schema and data. This randomgenerator module is fragmented into 2 parts, schemagen.sh and datagen.sh
 
 1. schemagen.sh 
 
-Syntax:
+        Syntax:
 
-./schemagen.sh -t 4 -c 8 -d"Boolean|CHAR(32)|INTERVAL|FLOAT|numeric(8,3)|uuid"
+        ./schemagen.sh -t 4 -c 8 -d"Boolean|CHAR(32)|INTERVAL|FLOAT|numeric(8,3)|uuid"
 
-or                 
+         or                 
 
-./schemagen.sh -t 4 -c 8 -d"Array[Boolean]|ARRAY[CHAR(32)]|ARRAY[INTERVAL]|ARRAY[FLOAT]|ARRAY[numeric(8,3)]|ARRAY[uuid]"
+        ./schemagen.sh -t 4 -c 8 -d"Array[Boolean]|ARRAY[CHAR(32)]|ARRAY[INTERVAL]|ARRAY[FLOAT]|ARRAY[numeric(8,3)]|ARRAY[uuid]"
 
-or
+         or
 
-./schemagen.sh --tables 4 --columns 8 --datatypes "Boolean|CHAR(32)|INTERVAL|FLOAT|numeric(8,3)|uuid"
+        ./schemagen.sh --tables 4 --columns 8 --datatypes "Boolean|CHAR(32)|INTERVAL|FLOAT|numeric(8,3)|uuid"
 
-Parameters:
+        Parameters:
 
--t Number of tables
--c Number of columns in each table
--d datatypes list ## Must be pipe seperated
+        -t Number of tables
+        -c Number of columns in each table
+        -d datatypes list ## Must be pipe seperated
 
 
-Format of schema generated:
+        Format of schema generated:
 
-create table autogenerate<Number>
-(
-col0 <data type> ,
-col1 <data type> ,
-col2 <data type> ,
-col3 <data type>
-);
+        create table autogenerate<Number>
+        (
+        col0 <data type> ,
+        col1 <data type> ,
+        col2 <data type> ,
+        col3 <data type>
+        );
 
-Output file:- schema_<number>.sql
+        Output file:- schema_<number>.sql
 
-Support: - All Vertica Primitive Data types
-
-               - All Array Data types
-
-                -All Set Data types
+        Support: - All Vertica Primitive Data types
+                 - All Array Data types
+                 -All Set Data types
 
 
 2. datagen.sh
 
-Note: Either you can use schema file generated from schemagen.sh or you can use your independent schema
+        Note: Either you can use schema file generated from schemagen.sh or you can use your independent schema
 
-Syntax: ./datagen.sh -fschema_1591538597.sql -r10 -lc 
+         Syntax: ./datagen.sh -fschema_1591538597.sql -r10 -lc 
 
-or
+        or
 
-./datagen.sh --file schema_1591616769.sql --rows 10 --load copy
+        ./datagen.sh --file schema_1591616769.sql --rows 10 --load copy
 
-Parameters:
+        Parameters:
 
--f your schema file
--r number of rows
--l load type of output # i for insert and c for copy or you can write "insert" or "copy" 
-
-
-
-Format of schema needed:
-
-create table autogenerate<Number>
-(
-col0 <data type> ,
-col1 <data type> ,
-col2 <data type> ,
-col3 <data type>
-);
+        -f your schema file
+        -r number of rows
+        -l load type of output # i for insert and c for copy or you can write "insert" or "copy" 
 
 
-Note: If you have your own schema, it will do the magic!
 
-Outputfile: <tablename>.dat
+        Format of schema needed:
 
-Support: - All Vertica Primitive Data types except BINARY, VARBINARY, GEOMETRY & GEOGRAPHY
-                - All Array Data types expect ARRAY[BINARY] & ARRAY [VARBINARY]
+        create table autogenerate<Number>
+        (
+        col0 <data type> ,
+        col1 <data type> ,
+        col2 <data type> ,
+        col3 <data type>
+        );
+
+
+        Note: If you have your own schema, it will do the magic!
+
+        Outputfile: <tablename>.dat
+
+        Support: - All Vertica Primitive Data types except BINARY, VARBINARY, GEOMETRY & GEOGRAPHY
+                 - All Array Data types expect ARRAY[BINARY] & ARRAY [VARBINARY]
 
 List of Data Types Supported: 
 
