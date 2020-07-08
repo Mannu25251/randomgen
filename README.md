@@ -123,65 +123,65 @@ Support                  manvendra2525@gmail.com
 
 List of Data Types Supported: 
 
-Data Types	Limitation
-REAL	
-INTEGER	
-INT	
-BIGINT	
-SMALLINT	
-TINYINT	
-BOOLEAN	
-CHAR	Size should be 32
-VARCHAR	Data Generated is of size 72 
-LONG VARCHAR	Data Generated is of size 572
-UUID	
-INTERVAL	
-INTERVAL DAY	
-INTERVAL DAY TO HOUR	
-INTERVAL DAY TO MINUTE	
-INTERVAL DAY TO SECOND	
-INTERVAL HOUR	
-INTERVAL HOUR TO MINUTE	
-INTERVAL HOUR TO SECOND	
-INTERVAL MINUTE	
-INTERVAL MINUTE TO SECOND	
-INTERVAL MONTH	
-INTERVAL SECOND	
-INTERVAL YEAR	
-INTERVAL YEAR TO MONTH	
-TIME	
-TIMETZ	
-TIMESTAMP	
-TIMESTAMPTZ	
-DATE	
-DATETIME	
-FLOAT	
-NUMERIC	
-DECIMAL	
-DOUBLE	
-Array[Boolean]	
-Array[Char]	
-Array[Date]	
-Array[Float8]	
-Array[Int8]	
-Array[Interval Day to Hour]	
-Array[Interval Day to Minute]	
-Array[Interval Day to Second]	
-Array[Interval Day]	
-Array[Interval Hour to Minute]	
-Array[Interval Hour to Second]	
-Array[Interval Hour]	
-Array[Interval Minute to Second]	
-Array[Interval Minute]	
-Array[Interval Month]	
-Array[Interval Second]	
-Array[Interval Year to Month]	
-Array[Interval Year]	
-Array[Numeric]	
-Array[TimeTz]	
-Array[Time]	
-Array[TimestampTz]	
-Array[Timestamp]	
-Array[Uuid]	
-Array[Varchar]	
+Data Types
+REAL
+INTEGER
+INT
+BIGINT
+SMALLINT
+TINYINT
+BOOLEAN
+CHAR (Size should be 32)
+VARCHAR (Data Generated is of size 72) 
+LONG VARCHAR (Data Generated is of size 572)
+UUID
+INTERVAL
+INTERVAL DAY
+INTERVAL DAY TO HOUR
+INTERVAL DAY TO MINUTE
+INTERVAL DAY TO SECOND
+INTERVAL HOUR
+INTERVAL HOUR TO MINUTE
+INTERVAL HOUR TO SECOND
+INTERVAL MINUTE
+INTERVAL MINUTE TO SECOND
+INTERVAL MONTH
+INTERVAL SECOND
+INTERVAL YEAR
+INTERVAL YEAR TO MONTH
+TIME
+TIMETZ
+TIMESTAMP
+TIMESTAMPTZ
+DATE
+DATETIME
+FLOAT
+NUMERIC
+DECIMAL
+DOUBLE
+Array[Boolean]
+Array[Char]
+Array[Date]
+Array[Float8]
+Array[Int8]
+Array[Interval Day to Hour]
+Array[Interval Day to Minute]
+Array[Interval Day to Second]
+Array[Interval Day]
+Array[Interval Hour to Minute]
+Array[Interval Hour to Second]
+Array[Interval Hour]
+Array[Interval Minute to Second]
+Array[Interval Minute]
+Array[Interval Month]
+Array[Interval Second]
+Array[Interval Year to Month]
+Array[Interval Year]
+Array[Numeric]
+Array[TimeTz]
+Array[Time]
+Array[TimestampTz]
+Array[Timestamp]
+Array[Uuid]
+Array[Varchar]
 
