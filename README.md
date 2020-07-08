@@ -42,12 +42,13 @@ And many more...
 Version                  1.0v
 Release	                 Beta
 Scripting Language 	     Bash Shell Scripting
-Developer	               Manvendra Panwar
-Support                  manvendra2525@gmail.com
+
+## Contributor 	              
+- Manvendra S Panwar <manvendra2525@gmail.com>
 
 *Highlight*: This tool is powered with shell scripting which generate automatic schema and data. This randomgenerator module is fragmented into 2 parts, schemagen.sh and datagen.sh
 
-1. schemagen.sh 
+## 1. schemagen.sh 
 
         Syntax:
 
@@ -85,7 +86,7 @@ Support                  manvendra2525@gmail.com
                  -All Set Data types
 
 
-2. datagen.sh
+## 2. datagen.sh
 
         Note: Either you can use schema file generated from schemagen.sh or you can use your independent schema
 
@@ -121,7 +122,7 @@ Support                  manvendra2525@gmail.com
         Support: - All Vertica Primitive Data types except BINARY, VARBINARY, GEOMETRY & GEOGRAPHY
                  - All Array Data types expect ARRAY[BINARY] & ARRAY [VARBINARY]
 
-List of Data Types Supported: 
+## List of Data Types Supported: 
 
 Data Types
 REAL
@@ -185,3 +186,6 @@ Array[Timestamp]
 Array[Uuid]
 Array[Varchar]
 
+## Licence and Copyright 
+© Manvendra S Panwar 
+Licensed under the [MIT LICENSE](LICENSE)
