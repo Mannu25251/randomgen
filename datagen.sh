@@ -102,10 +102,8 @@ then
  for j in $(ls -1 F*)
  do
  i=0
- echo $nrows
  while [[ $i -le $nrows ]]
  do
-   echo $i
    ((i = i + 1))
    while read line
    do
@@ -115,15 +113,11 @@ then
        fname=$tableau
     fi
     colval=$(echo $line | grep -E '^[[:space:]]?[Aa-Zz].*[[:space:]].*[Aa-Zz].*([0-9]?)' | grep -vi 'create')
-    echo $colval
     if [[ -n $colval ]]
     then
         datatype=$(echo $line | cut -f2- -d ' ' | sed 's/ //g;s/([0-9]*)//;s/,//')
-        echo $datatype
         datatypefull=$(echo $line |  awk '{first = $1; $1 = ""; print $0 }' | sed 's/^[ \t]//;s/,//')
-        echo $datatypefull
         datatypearray=$(echo $line | awk '{print $2}' | sed 's/ //' | grep ARRAY) 
-        echo $datatypearray
         if [[ -n $datatypearray ]]
         then
            checkdenu=$(echo $line | awk '{print $2}' | sed 's/ //;s/ARRAY\[//;s/\]//' | grep -iE 'numeric|decimal' )
