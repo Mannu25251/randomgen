@@ -49,7 +49,7 @@ Scripting Language 	     Bash Shell Scripting
 *Highlight*: This tool is powered with shell scripting which generate automatic schema and data. This randomgenerator module is fragmented into 2 parts, schemagen.sh and datagen.sh
 
 ## 1. schemagen.sh 
-
+```
         Syntax:
 
         ./schemagen.sh -t 4 -c 8 -d"Boolean|CHAR(32)|INTERVAL|FLOAT|numeric(8,3)|uuid"
@@ -85,9 +85,9 @@ Scripting Language 	     Bash Shell Scripting
                  - All Array Data types
                  -All Set Data types
 
-
+```
 ## 2. datagen.sh
-
+```
         Note: Either you can use schema file generated from schemagen.sh or you can use your independent schema
 
          Syntax: ./datagen.sh -fschema_1591538597.sql -r10 -lc 
@@ -121,9 +121,9 @@ Scripting Language 	     Bash Shell Scripting
 
         Support: - All Vertica Primitive Data types except BINARY, VARBINARY, GEOMETRY & GEOGRAPHY
                  - All Array Data types expect ARRAY[BINARY] & ARRAY [VARBINARY]
-
+```
 ## List of Data Types Supported: 
-
+```
 Data Types
 REAL
 INTEGER
@@ -185,6 +185,7 @@ Array[TimestampTz]
 Array[Timestamp]
 Array[Uuid]
 Array[Varchar]
+```
 
 ## Licence and Copyright 
 © Manvendra S Panwar 
